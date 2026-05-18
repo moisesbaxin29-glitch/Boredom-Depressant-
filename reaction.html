@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction Test - Boredom Depressant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        
+        <h1 class="game-heading">REACTION TEST</h1>
+        
+        <!-- Level Tracker Area -->
+        <h2 id="level-display" style="font-size: 14px; color: #ff0066; margin-bottom: 20px;">LEVEL: 1/5</h2>
+        
+        <div class="scoreboard">
+            <span class="score-text">LAST SCORE: <span id="current-score">0</span>ms</span>
+            <span class="score-text">BEST SCORE: <span id="best-score">0</span>ms</span>
+        </div>
+
+        <div id="click-zone" class="start-state">
+            <p id="zone-text">CLICK TO START</p>
+        </div>
+
+        <div class="back-container">
+            <a href="games.html" class="back-link">← BACK TO ARCADE</a>
+        </div>
+
+    </div>
+
+    <script src="reaction.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match - Boredom Depressant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Custom beginner styles just for this game so style.css stays untouched -->
+    <style>
+        .memory-container {
+            max-width: 600px;
+            margin: 0px auto;
+            padding-top: 30px;
+        }
+        .memory-heading {
+            font-size: 24px;
+            color: #ff0066;
+            text-shadow: 0px 0px 10px #ff0066;
+            margin-bottom: 20px;
+        }
+        .status-box {
+            font-size: 12px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        /* Grid layout for 4x4 cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            max-width: 400px;
+            margin: 0px auto;
+            margin-bottom: 30px;
+        }
+        /* Style for an individual card block */
+        .card {
+            width: 80px;
+            height: 80px;
+            background-color: #16161a;
+            border: 2px solid #ff0066;
+            box-shadow: 0px 0px 8px #ff0066;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: transparent; /* Hides the symbol at start */
+            cursor: pointer;
+            user-select: none;
+        }
+        /* Class added by JS when a card is clicked */
+        .card.flipped {
+            background-color: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
+            box-shadow: 0px 0px 10px #ffffff;
+        }
+        /* Class added by JS when cards match successfully */
+        .card.matched {
+            background-color: #00ffcc;
+            color: #000000;
+            border-color: #00ffcc;
+            box-shadow: 0px 0px 10px #00ffcc;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="memory-container">
+        <h1 class="memory-heading">MEMORY MATCH</h1>
+        
+        <div class="status-box">
+            <span>TIME LEFT: <span id="timer-display">45</span>s</span>
+            <span style="margin-left: 40px;">STATUS: <span id="msg-display">FIND PAIRS</span></span>
+        </div>
+
+        <!-- The 16 cards will be generated inside here by JavaScript -->
+        <div id="grid-container" class="card-grid"></div>
+
+        <div class="back-container">
+            <a href="games.html" class="back-link">← BACK TO ARCADE</a>
+        </div>
+    </div>
+
+    <script src="memory.js"></script>
+</body>
+</html>
