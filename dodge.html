@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodge Box - Boredom Depressant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Custom styling just for this page to keep style.css safe -->
+    <style>
+        .dodge-container {
+            max-width: 600px;
+            margin: 0px auto;
+            padding-top: 20px;
+        }
+        .dodge-heading {
+            font-size: 24px;
+            color: #00ffcc;
+            text-shadow: 0px 0px 10px #00ffcc;
+            margin-bottom: 15px;
+        }
+        .score-box {
+            font-size: 12px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        /* Style for our game screen drawing area */
+        #gameCanvas {
+            background-color: #16161a;
+            border: 3px solid #00ffcc;
+            box-shadow: 0px 0px 15px #00ffcc;
+            display: block;
+            margin: 0px auto;
+            margin-bottom: 20px;
+        }
+        .controls-hint {
+            font-size: 10px;
+            color: #888888;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dodge-container">
+        <h1 class="dodge-heading">DODGE BOX</h1>
+        
+        <div class="score-box">
+            <span>SURVIVED: <span id="score-display">0</span>s</span>
+        </div>
+
+        <!-- The 400x400 pixels arcade window -->
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <p class="controls-hint">USE LEFT & RIGHT ARROW KEYS TO MOVE</p>
+
+        <!-- Reuse the play button style from our menu -->
+        <button id="start-btn" class="play-btn-small">START GAME</button>
+
+        <div class="back-container" style="margin-top: 30px;">
+            <a href="games.html" class="back-link">← BACK TO ARCADE</a>
+        </div>
+    </div>
+
+    <script src="dodge.js"></script>
+</body>
+</html>
