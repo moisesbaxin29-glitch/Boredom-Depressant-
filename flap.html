@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Flap</title>
+    <link rel="stylesheet" href="style.css">
+    <style>#gameCanvas { border: 3px solid var(--neon-pink); box-shadow: 0 0 15px var(--neon-pink); }</style>
+</head>
+<body>
+    <div class="game-container">
+        <h1 style="color: var(--neon-pink); text-shadow: 0 0 10px var(--neon-pink);">LASER FLAP</h1>
+        <div class="game-ui"><span>SCORE: <span id="scoreVal">0</span></span></div>
+        <canvas id="gameCanvas" width="400" height="500"></canvas>
+        <p class="controls-hint">PRESS SPACEBAR TO THRUST</p>
+        <a href="games.html" class="back-link">← BACK TO ARCADE</a>
+    </div>
+    <script src="leaderboard.js"></script>
+    <script src="flap.js"></script>
+</body>
+</html>

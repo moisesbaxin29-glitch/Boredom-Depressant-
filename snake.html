@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Snake</title>
+    <link rel="stylesheet" href="style.css">
+    <style>#gameCanvas { border: 3px solid var(--neon-green); box-shadow: 0 0 15px var(--neon-green); }</style>
+</head>
+<body>
+    <div class="game-container">
+        <h1 style="color: var(--neon-green); text-shadow: 0 0 10px var(--neon-green);">NEON SNAKE</h1>
+        <div class="game-ui"><span>SCORE: <span id="scoreVal">0</span></span></div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <p class="controls-hint">USE ARROW KEYS TO MOVE</p>
+        <a href="games.html" class="back-link">← BACK TO ARCADE</a>
+    </div>
+    <script src="leaderboard.js"></script>
+    <script src="snake.js"></script>
+</body>
+</html>

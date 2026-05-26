@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Blaster</title>
+    <link rel="stylesheet" href="style.css">
+    <style>#gameCanvas { border: 3px solid var(--neon-cyan); box-shadow: 0 0 15px var(--neon-cyan); }</style>
+</head>
+<body>
+    <div class="game-container">
+        <h1 style="color: var(--neon-cyan); text-shadow: 0 0 10px var(--neon-cyan);">SPACE BLASTER</h1>
+        <div class="game-ui"><span>SCORE: <span id="scoreVal">0</span></span><span>STAGE: <span id="stageVal">1</span></span></div>
+        <canvas id="gameCanvas" width="400" height="500"></canvas>
+        <p class="controls-hint">LEFT/RIGHT ARROWS TO MOVE | SPACE TO SHOOT</p>
+        <a href="games.html" class="back-link">← BACK TO ARCADE</a>
+    </div>
+    <script src="leaderboard.js"></script>
+    <script src="blaster.js"></script>
+</body>
+</html>

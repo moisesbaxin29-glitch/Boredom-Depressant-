@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboards - Boredom Depressant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .scores-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .score-table {
+            width: 100%;
+            font-size: 10px;
+            text-align: left;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .score-table th {
+            border-bottom: 2px solid #444;
+            padding-bottom: 8px;
+            color: #00ccff;
+        }
+        .score-table td {
+            padding: 12px 0;
+            border-bottom: 1px dashed #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="scores-container">
+        <h1 class="title" style="margin-bottom: 40px; font-size: 32px;">GLOBAL <span class="pink-text">RANKINGS</span></h1>
+        
+        <div class="games-grid" id="boards-grid">
+            </div>
+
+        <div class="back-container" style="margin-top: 40px;">
+            <a href="games.html" class="back-link">← BACK TO ARCADE</a>
+        </div>
+    </div>
+
+    <script src="leaderboard.js"></script>
+    <script>
+        function renderTable(title, data, glowClass, headingColor) {
+            let rows = data.length === 0 
+                ? `<tr><td colspan="2" style="text-align:center; color:#555; padding: 20px 0;">NO DATA</td></tr>` 
+                : data.map((d, i) => `<tr><td>#${i+1} ${d.name}</td><td style="text-align:right;">${d.score}</td></tr>`).join('');
+            
+            return `
+                <div class="game-card ${glowClass}">
+                    <h2 class="game-name" style="color: ${headingColor}; font-size: 14px; margin-bottom: 10px;">${title}</h2>
+                    <table class="score-table">
+                        <tr><th>PLAYER</th><th style="text-align:right;">SCORE</th></tr>
+                        ${rows}
+                    </table>
+                </div>
+            `;
+        }
+
+        const grid = document.getElementById('boards-grid');
+        grid.innerHTML += renderTable('HALL OF FAME', LeaderboardManager.getHallOfFame(), 'yellow-glow', '#ffff00');
+        grid.innerHTML += renderTable('NEON SNAKE', LeaderboardManager.getScores('snake'), 'green-glow', '#33ff33');
+        grid.innerHTML += renderTable('LASER FLAP', LeaderboardManager.getScores('flap'), 'pink-glow', '#ff0066');
+        grid.innerHTML += renderTable('SPACE BLASTER', LeaderboardManager.getScores('blaster'), 'blue-glow', '#00ccff');
+    </script>
+</body>
+</html>

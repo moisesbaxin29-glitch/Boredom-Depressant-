@@ -4,42 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcade Menu - Boredom Depressant</title>
-    <!-- Simple Arcade Font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .leaderboard-btn-container {
+            margin-bottom: 40px;
+        }
+        .leaderboard-btn {
+            background-color: transparent;
+            color: #ffff00;
+            border: 2px solid #ffff00;
+            box-shadow: 0px 0px 10px #ffff00;
+            font-size: 12px;
+            display: inline-block;
+        }
+        .leaderboard-btn:hover {
+            background-color: rgba(255, 255, 0, 0.1);
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px #ffff00;
+        }
+    </style>
 </head>
 <body>
 
     <div class="menu-container">
         <h1 class="menu-title">SELECT GAME</h1>
         
-        <!-- Grid wrapper for our game boxes -->
+        <div class="leaderboard-btn-container">
+            <a href="score.html" class="btn leaderboard-btn">🏆 VIEW LEADERBOARDS 🏆</a>
+        </div>
+        
         <div class="games-grid">
             
-            <!-- Game Card 1: Reaction Time -->
             <div class="game-card blue-glow">
                 <h2 class="game-name">REACTION TEST</h2>
                 <p class="game-desc">Test your reflex speeds through 5 unique, trickier interactive levels!</p>
                 <a href="reaction.html" class="play-btn-small">PLAY</a>
             </div>
 
-            <!-- Game Card 2: Memory Match -->
             <div class="game-card pink-glow">
                 <h2 class="game-name">MEMORY MATCH</h2>
                 <p class="game-desc">Flip the retro cards and match all the pairs before time runs out!</p>
                 <a href="memory.html" class="play-btn-small">PLAY</a>
             </div>
 
-            <!-- Game Card 3: Dodge Box -->
             <div class="game-card green-glow">
                 <h2 class="game-name">DODGE BOX</h2>
                 <p class="game-desc">Use your arrow keys to dodge the falling blocks. Survive as long as you can!</p>
                 <a href="dodge.html" class="play-btn-small">PLAY</a>
             </div>
 
+            <div class="game-card green-glow">
+                <h2 class="game-name" style="color: #33ff33;">NEON SNAKE</h2>
+                <p class="game-desc">Gobble down the high-voltage cells to grow your tail. Don't hit the walls!</p>
+                <a href="snake.html" class="play-btn-small" style="background-color: #33ff33; box-shadow: 0px 0px 10px #33ff33;">PLAY</a>
+            </div>
+
+            <div class="game-card pink-glow">
+                <h2 class="game-name" style="color: #ff0066;">LASER FLAP</h2>
+                <p class="game-desc">Thrust your micro-ship through columns of volatile plasma lasers.</p>
+                <a href="flap.html" class="play-btn-small" style="background-color: #ff0066; box-shadow: 0px 0px 10px #ff0066;">PLAY</a>
+            </div>
+
+            <div class="game-card blue-glow">
+                <h2 class="game-name" style="color: #00ccff;">SPACE BLASTER</h2>
+                <p class="game-desc">Defend your quadrant from waves of hostile invaders. Upgrades on every stage!</p>
+                <a href="blaster.html" class="play-btn-small" style="background-color: #00ccff; box-shadow: 0px 0px 10px #00ccff;">PLAY</a>
+            </div>
+
         </div>
 
-        <!-- Back Button to go home -->
         <div class="back-container">
             <a href="index.html" class="back-link">← BACK TO HOME</a>
         </div>
